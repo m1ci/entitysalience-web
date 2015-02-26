@@ -1,0 +1,102 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Datasets description</title>
+        <meta name="description" content="some description">
+        <meta name="keywords" content="some keywords">
+        <link href="../public/style/main.css" rel="stylesheet" />
+        <script src="http://code.jquery.com/jquery-1.8.1.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-34970429-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                if(!navigator.userAgent.match(/Milans_browser/i)){
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                }
+            })();
+    </script>
+</head>
+    <body>
+        <div id="header-part">
+            <div id="sub-header-part">
+                <h1><a href="#">Entity Salience Collection</a></h1>
+                <!--
+                <span style="color: #91959C; font-size: medium;">v0.2<sup>Beta</sup></span>
+                -->
+            </div>
+        </div>
+        <div id="navigation">
+            <div class="sub-navigation">
+                <ul>
+                    <li >
+                        <a href="../">About</a>
+                    </li>
+                    <li class="active">
+                        <a href="/datasets/czechtraveler/dataset-description/">Dataset description</a>
+                    </li>
+                    <li>
+                        <a href="../acknowledgments/">Acknowledgments</a>
+                    </li>
+                    <li>
+                        <a href="../contact/">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="sub-main">
+                <h1>Datasets description</h1>
+                <hr>
+                <h1>Reuters-128 (salience dataset)</h1>
+                <p>The Reuters-128 salience corpus is an extension of the entity linking corpus Reuters-128, which is part of the N3 datasets collection [1]. The Reuters-128 dataset is an English corpus in the NLP Interchange Format (NIF) and it contains 128 economic news articles. The dataset contains information for 880 named entities with their position in the document (beginOffset, endOffset) and a URI of a DBpedia resource identifying the entity. The salience dataset extends the Reuters-128 dataset also with 3,551 common entities.</p>
+                <p>Entity salience information was obtained by crowdsourcing salience information using the CrowdFlower platform. For each named and common entity in the Reuters-128 dataset, we collected at least three judgement. Only judgements from contributors with trust score higher than 70% were considered as trusted judgements. If the trust score of a contributor falls bellow 70%, all his/her judgements were disregarded. The annotators were asked to carrefully read the document, and then determine how salient is the given entity for the document. The annotators classified the entities in one of the following classes:</p>
+                <ul>
+                    <li>Most Salient - Entities with the highest focus of attention in the article. The document is mostly about the these entities, or the entities play a prominent role in the content of the article.</li>
+                    <li>Less Salient - Entities with less focus of attention in the article. The entities play an important role in some parts of the content of the article.</li>
+                    <li>Not Salient - The article is really not about the entities.</li>
+                </ul>
+                <p>Download location: <a href="https://github.com/KIZI/ner-eval-collection/blob/master/reuters-128-entity-salience.ttl">https://github.com/KIZI/ner-eval-collection/blob/master/reuters-128-entity-salience.ttl</a></p>
+                <p>[1] Michael Röder, Ricardo Usbeck, Sebastian Hellmann, Daniel Gerber, and Andreas Both. N3 - A Collection of Datasets for Named Entity Recognition and Disambiguation in the NLP Interchange Format. In Porceedings of the 9th edition of the Language Resources and Evaluation Conference, 26-31 May, Reykjavik, Iceland (<a href="http://aksw.org/Projects/N3NERNEDNIF.html">link</a>)</p>
+                <h1>New York Times (salience dataset)</h1>
+                <p>The New York Times datasets is an entity salience dataset provided by Google [2]. The salience annotations in the NYT dataset have been automatically generated by aligning the entities in the abstract and the document and considering that every entity which occurs in the abstract is salient. The New York Times dataset consists of two partitions. A training partition which consists of about 90% of the data, and a testing partition con- sisting of the remaining 10%. The NYT dataset [5] provides only information about the begin and end index of the entities, the entity name, document ID and salience information. The annotations are shared without the underlying document’s content. We converted the dataset in the NLP Interchange Format (NIF).</p>
+                <p>Download location:
+                    <ul>
+                        <li>training partition in NIF - <a href="http://ner.vse.cz/datasets/nyt-salience/nyt-train.ttl">http://ner.vse.cz/datasets/nyt-salience/nyt-train.ttl</a></li>
+                        <li>evaluation partition in NIF - <a href="http://ner.vse.cz/datasets/nyt-salience/nyt-eval.ttl">http://ner.vse.cz/datasets/nyt-salience/nyt-eval.ttl</a></li>
+                    </ul>
+                </p>
+                <p>[2] Dan Gillick and Jesse Dunietz. A new entity salience task with millions of training examples. In Proceedings of the European Association for Computational Linguistics, 2014. (<a href="https://code.google.com/p/nyt-salience/">link</a>)</p>
+                </br>
+                </br>
+                </br>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="sub-footer">
+                <div class="sub-footer2">
+                    <div id="footer-horizontal-1">
+                        Some more info:
+                    </div>
+                    <div id="footer-horizontal-2">
+                        <div id="info-box">
+                            <ul>
+                            <li>DISCLAIMER: The datsets collection is an experimental academic project. No precautions relating to datasets availability, privacy and safety of data are in place. Use at your own risk.</li>                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
